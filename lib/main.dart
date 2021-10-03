@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:uiblog/langdingpage%201/three3.dart';
 import 'package:uiblog/langdingpage%201/two2.dart';
@@ -5,7 +7,9 @@ import 'package:uiblog/login/login2.dart';
 import './langdingpage 1/one1.dart';
 import 'Login/login1.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

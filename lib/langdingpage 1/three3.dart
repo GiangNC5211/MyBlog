@@ -17,19 +17,15 @@ class LangdingPage3 extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-
           Container(
             height: 422,
             width: 338,
             decoration: BoxDecoration(
               //border ,
               image: DecorationImage(
-                image: AssetImage(AppAssets.imageStart2),
-                fit: BoxFit.fill
-                ),
-              ),
+                  image: AssetImage(AppAssets.imageStart2), fit: BoxFit.fill),
             ),
-
+          ),
           SizedBox(
             child: Text(
               ' Niềm Vui ',
@@ -40,7 +36,9 @@ class LangdingPage3 extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           SizedBox(
             child: Text(
               'Bạn có thể trải nghiệm nhiều niềm vui đặc biệt qua từng câu chuyện của bản thân hoặc một người xa lạ bạn chưa từng gặp.',
@@ -48,12 +46,12 @@ class LangdingPage3 extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Nunito',
                 fontSize: 16,
-
               ),
-
             ),
           ),
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           GestureDetector(
             child: Container(
               height: 50,
@@ -65,23 +63,27 @@ class LangdingPage3 extends StatelessWidget {
                   color: AppColors.primaryColors,
                   borderRadius: BorderRadius.all(
                       Radius.circular(10.0)), // Set rounded corner radius
-                  boxShadow: const [BoxShadow(blurRadius: 10,color: AppColors.primaryColors,offset: Offset(1,3))] // Make rounded corner of border
-              ),
-              child: Text('Tiếp',
+                  boxShadow: const [
+                    BoxShadow(
+                        blurRadius: 10,
+                        color: AppColors.primaryColors,
+                        offset: Offset(1, 3))
+                  ] // Make rounded corner of border
+                  ),
+              child: Text(
+                'Tiếp',
                 style: TextStyle(
                   fontFamily: 'Nunito',
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 20,
-
                 ),
               ),
-
             ),
-            onTap: () { Navigator.of(context).pushNamed(Login1.routeName); },
-
+            onTap: () {
+              Navigator.of(context).pushNamed(Login1.routeName);
+            },
           ),
-
         ],
       ),
     );
