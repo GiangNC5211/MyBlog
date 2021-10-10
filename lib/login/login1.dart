@@ -212,32 +212,32 @@ class Login1 extends StatelessWidget {
                         ),
                         onTap: () async {
                           if (_formKey.currentState!.validate()) {
-                            try {
-                              UserCredential userCredential = await FirebaseAuth
-                                  .instance
-                                  .signInWithEmailAndPassword(
-                                      email: nameController.text,
-                                      password: passwordController.text);
-                              if (userCredential.user!.uid.isNotEmpty) {
-                                Navigator.of(context)
-                                    .pushNamed(Login2.routeName);
-                              } else {
-                                print("code ngu");
-                              }
-                            } on FirebaseAuthException catch (e) {
-                              if (e.code == 'user-not-found') {
-                                print('No user found for that email.');
-                                showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return Text("sai tk");
-                                  },
-                                );
-                              } else if (e.code == 'wrong-password') {
-                                print('Wrong password provided for that user.');
-                              }
-                            }
+                            Navigator.of(context).pushNamed(Login1.routeName);
                           }
+                          // if (_formKey.currentState!.validate()) {
+                          //   try {
+                          //     UserCredential userCredential = await FirebaseAuth
+                          //         .instance
+                          //         .signInWithEmailAndPassword(
+                          //             email: nameController.text,
+                          //             password: passwordController.text);
+                          //     if (userCredential.user!.uid.isNotEmpty) {
+                          //       Navigator.of(context)
+                          //           .pushNamed(Login2.routeName);
+                          //     } else {
+                          //       print("code ngu");
+                          //     }
+                          //   } on FirebaseAuthException catch (e) {
+                          //     if (e.code == 'user-not-found') {
+                          //       print('No user found for that email.');
+                          //       showDialog(
+                          //         context: context,
+                          //         builder: (context) {
+                          //           return Text("sai tk");
+                          //         },
+                          //       );
+                          //     } else if (e.code == 'wrong-password') {
+                          //       print('Wrong password provided for that user.');
                         },
                       ),
                     ],
