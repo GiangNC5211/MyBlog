@@ -70,7 +70,7 @@ class LangdingPage2 extends StatelessWidget {
                   color: AppColors.primaryColors,
                   borderRadius: BorderRadius.all(
                       Radius.circular(10.0)), // Set rounded corner radius
-                  boxShadow: [BoxShadow(blurRadius: 10,color: AppColors.primaryColors,offset: Offset(1,3))] // Make rounded corner of border
+                  boxShadow: const [BoxShadow(blurRadius: 10,color: AppColors.primaryColors,offset: Offset(1,3))] // Make rounded corner of border
               ),
               child: Text('Tiếp',
                 style: TextStyle(
